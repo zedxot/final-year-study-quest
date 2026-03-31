@@ -56,6 +56,7 @@ h1 {
     font-weight: 800;
     background: linear-gradient(135deg, #a5b4fc 0%, #c084fc 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 0.5rem;
     padding-top: 20px;
@@ -315,11 +316,15 @@ h1 {
 
 @media (max-width: 768px) {
     .main-countdown {
-        gap: 1rem;
+        gap: 0.5rem;
+    }
+
+    .time-box {
+        min-width: 60px;
     }
 
     .time-box span {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
     .upcoming-exam {
