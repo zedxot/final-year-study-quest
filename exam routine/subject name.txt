@@ -1,0 +1,15 @@
+National University
+
+SUBJECT : PHYSICS
+Syllabus for Four Year B. Sc Honours Course
+Effective from the Session : 2013-2014
+
+Paper Code,Paper Title,Marks,Credits
+242703,Solid State Physics-II,100,4
+242707,Electronics-II,100,4
+242709,Classical Electrodynamics,100,4
+242711,Statistical Mechanics,100,4
+242703,Solid State Physics-II,100,4
+242707,Electronics-II,100,4
+242709,Classical Electrodynamics,100,4
+242711,Statistical Mechanics,100,4

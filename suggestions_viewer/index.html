@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suggestion Questions Viewer</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Bengali:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- MathJax for rendering LaTeX -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Filters -->
+        <aside class="sidebar glass-panel">
+            <div class="sidebar-header">
+                <h2><i class="fa-solid fa-book-open"></i> Study Quest</h2>
+                <a href="../index.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Routine</a>
+            </div>
+            
+            <div class="filter-section">
+                <h3>Filters</h3>
+                
+                <div class="form-group">
+                    <label for="subject-select">Subject</label>
+                    <div class="custom-select">
+                        <select id="subject-select">
+                            <option value="all">All Subjects</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="chapter-select">Chapter</label>
+                    <div class="custom-select">
+                        <select id="chapter-select" disabled>
+                            <option value="all">All Chapters</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group toggle-group">
+                    <label for="suggested-toggle">Show Only Suggested</label>
+                    <label class="switch">
+                        <input type="checkbox" id="suggested-toggle">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                
+                <div class="form-group">
+                    <label style="margin-bottom: 12px; display: block;">Years & Tags</label>
+                    <div id="year-filters" class="badge-container">
+                        <!-- Badges populated by JS -->
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="topbar glass-panel">
+                <div class="search-container">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" id="search-input" placeholder="Search by question text or ID...">
+                </div>
+                <div class="stats">
+                    <span id="result-count">0</span> Questions
+                </div>
+            </header>
+
+            <div class="questions-container" id="questions-container">
+                <!-- Question Cards populated by JS -->
+                <div class="loading-state">
+                    <div class="spinner"></div>
+                    <p style="margin-top: 16px;">Loading Suggestion Database...</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

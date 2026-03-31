@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Quest 4.0 - Roadmap</title>
+    <link rel="stylesheet" href="../style.css"> <!-- Base styles -->
+    <link rel="stylesheet" href="style.css"> <!-- 4.0 Styles -->
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Promise-based explicit execution of MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="roadmap-layout">
+    <div class="cosmos-bg"></div>
+    <div class="dust-overlay"></div>
+
+    <div class="roadmap-container">
+        
+        <!-- SIDEBAR -->
+        <aside class="roadmap-sidebar glass-panel">
+            <div class="hud-header">
+                <h2><i class="fa-solid fa-map-location-dot"></i> ROADMAP</h2>
+                <a href="../index.html" class="command-link"><i class="fa-solid fa-arrow-left"></i> ROUTINE</a>
+            </div>
+
+            <!-- Profile & Level -->
+            <div class="profile-block">
+                <div class="avatar-circle">
+                    <i class="fa-solid fa-user-graduate"></i>
+                </div>
+                <div class="level-indicator" id="hudLevelBadge">LVL 1</div>
+                
+                <div class="exp-bar-wrapper">
+                    <div class="exp-bar-fill" id="hudExpFill"></div>
+                </div>
+                <div class="exp-text" id="hudExpText">0 / 100 EXP</div>
+            </div>
+
+            <!-- Campaign Stats -->
+            <div class="campaign-logistics">
+                <h3><i class="fa-solid fa-chart-pie"></i> Preparation</h3>
+                <div class="global-progress">
+                    <div class="gp-text">Total Mastery</div>
+                    <div class="gp-value" id="hudGlobalStats">0%</div>
+                </div>
+                <div class="gp-bar-wrapper">
+                    <div class="gp-bar-fill" id="hudGlobalBar"></div>
+                </div>
+                
+                <h3 style="margin-top: 30px;"><i class="fa-solid fa-filter"></i> Filters Active</h3>
+                <ul class="filter-rules">
+                    <li class="rule-ban"><i class="fa-solid fa-ban"></i> 2023 BAN</li>
+                    <li class="rule-prio1"><i class="fa-solid fa-star"></i> 2020 & 2022 PRIO 1</li>
+                    <li class="rule-prio2"><i class="fa-solid fa-check-double"></i> 'is_suggested' PRIO 2</li>
+                </ul>
+            </div>
+
+            <button class="settings-btn" onclick="window.clearCacheAndReset()">
+                <i class="fa-solid fa-power-off"></i> RESET PROGRESS
+            </button>
+        </aside>
+
+        <!-- MAIN CONTENT (DOCUMENT VIEW) -->
+        <main class="roadmap-main">
+            <header class="roadmap-header">
+                <div>
+                    <h1>Today's Syllabus</h1>
+                    <p>Algorithmically filtered & chronologically grouped content.</p>
+                </div>
+                <div class="stats-badge" id="daily-progress-badge">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    <span id="statCleared">0</span> / <span id="statActive">0</span> Cleared
+                </div>
+            </header>
+
+            <!-- Rendered Subject > Chapter > Questions -->
+            <div class="syllabus-render-zone" id="bountyGrid">
+                <div class="loading-state">
+                    <i class="fa-solid fa-cog fa-spin"></i>
+                    <h2>Compiling Syllabus...</h2>
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <!-- Celebration Screen -->
+    <div id="levelUpOverlay" class="level-up-screen">
+        <div class="level-up-content">
+            <h1 class="glitch">LEVEL UP</h1>
+            <div class="new-level-badge" id="levelUpNumber">LVL 2</div>
+        </div>
+    </div>
+
+    <script src="../exams.js?v=4"></script>
+    <script src="script.js?v=4"></script>
+</body>
+</html>
