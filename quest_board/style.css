@@ -62,6 +62,15 @@ body {
     flex-direction: column;
 }
 
+@media (max-width: 1000px) {
+    .roadmap-sidebar {
+        width: 100%;
+        position: relative;
+        height: auto;
+        top: 0;
+    }
+}
+
 .glass-panel {
     background: var(--hud-bg);
     backdrop-filter: blur(16px);
@@ -248,6 +257,17 @@ body {
     color: var(--text-secondary);
 }
 
+@media (max-width: 1000px) {
+    .roadmap-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .roadmap-header h1 {
+        font-size: 1.5rem;
+    }
+}
+
 .stats-badge {
     background: rgba(59, 130, 246, 0.15);
     border: 1px solid rgba(59, 130, 246, 0.3);
@@ -325,6 +345,23 @@ body {
 
 .quest-row:last-child {
     margin-bottom: 0;
+}
+
+@media (max-width: 1000px) {
+    .quest-row {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .quest-btn {
+        width: 100%;
+        padding: 12px;
+    }
+    .subject-header {
+        font-size: 1.1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
 }
 
 /* High Priority Tag */
