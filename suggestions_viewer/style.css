@@ -569,6 +569,21 @@ input:checked + .slider:before {
         grid-column: 1 / -1;
     }
 
+    .badge-container {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 8px;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .badge-container::-webkit-scrollbar {
+        height: 4px;
+    }
+    
+    .filter-badge {
+        flex-shrink: 0;
+    }
+
     .topbar {
         flex-direction: column;
         gap: 16px;
