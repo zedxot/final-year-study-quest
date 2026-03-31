@@ -31,8 +31,12 @@
                 <a href="../index.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Routine</a>
             </div>
             
-            <div class="filter-section">
-                <h3>Filters</h3>
+            <div class="filter-section collapsed" id="mobileFilterSection">
+                <div class="filter-header" onclick="document.getElementById('mobileFilterSection').classList.toggle('collapsed')">
+                    <h3>Filters</h3>
+                    <i class="fa-solid fa-chevron-up collapse-icon"></i>
+                </div>
+                <div class="filter-content">
                 
                 <div class="form-group">
                     <label for="subject-select">Subject</label>
@@ -64,7 +68,9 @@
                     <label style="margin-bottom: 12px; display: block;">Years & Tags</label>
                     <div id="year-filters" class="badge-container">
                         <!-- Badges populated by JS -->
+                        <!-- Badges populated by JS -->
                     </div>
+                </div>
                 </div>
             </div>
         </aside>

@@ -103,12 +103,23 @@ body {
     flex: 1;
 }
 
-.filter-section h3 {
+.filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.filter-header h3 {
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: var(--text-secondary);
-    margin-bottom: 20px;
+    margin: 0;
+}
+
+.collapse-icon {
+    display: none;
 }
 
 .form-group {
@@ -550,14 +561,41 @@ input:checked + .slider:before {
     .filter-section {
         max-height: none;
         padding: 16px;
+    }
+
+    .filter-header {
+        cursor: pointer;
+        margin-bottom: 0;
+        padding: 4px 0;
+    }
+
+    .collapse-icon {
+        display: block;
+        color: var(--text-secondary);
+        transition: transform 0.3s ease;
+    }
+
+    .filter-section.collapsed .collapse-icon {
+        transform: rotate(180deg);
+    }
+
+    .filter-content {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 12px;
+        max-height: 1000px;
+        opacity: 1;
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+        margin-top: 15px;
     }
 
-    .filter-section h3 {
-        grid-column: 1 / -1;
-        margin-bottom: 5px;
+    .filter-section.collapsed .filter-content {
+        max-height: 0;
+        opacity: 0;
+        margin-top: 0;
+        padding: 0;
+        pointer-events: none;
     }
 
     .form-group {
