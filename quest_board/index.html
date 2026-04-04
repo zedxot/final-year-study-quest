@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Study Quest 4.0 - Roadmap</title>
-    <link rel="stylesheet" href="../style.css"> <!-- Base styles -->
-    <link rel="stylesheet" href="style.css"> <!-- 4.0 Styles -->
+    <link rel="stylesheet" href="../style.css?v=5"> <!-- Base styles -->
+    <link rel="stylesheet" href="style.css?v=5"> <!-- 4.0 Styles -->
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -63,12 +63,10 @@
                     <div class="gp-bar-fill" id="hudGlobalBar"></div>
                 </div>
                 
-                <h3 style="margin-top: 30px;"><i class="fa-solid fa-filter"></i> Filters Active</h3>
-                <ul class="filter-rules">
-                    <li class="rule-ban"><i class="fa-solid fa-ban"></i> 2023 BAN</li>
-                    <li class="rule-prio1"><i class="fa-solid fa-star"></i> 2020 & 2022 PRIO 1</li>
-                    <li class="rule-prio2"><i class="fa-solid fa-check-double"></i> 'is_suggested' PRIO 2</li>
-                </ul>
+                <h3 style="margin-top: 30px;"><i class="fa-solid fa-chart-line"></i> Subject Progression</h3>
+                <div id="subjectProgressionList" class="progression-list">
+                    <!-- Progress bars injected via JS -->
+                </div>
             </div>
 
             <button class="settings-btn" onclick="window.clearCacheAndReset()">
@@ -108,7 +106,7 @@
         </div>
     </div>
 
-    <script src="../exams.js?v=4"></script>
-    <script src="script.js?v=4"></script>
+    <script src="../exams.js?v=5"></script>
+    <script src="script.js?v=5"></script>
 </body>
 </html>

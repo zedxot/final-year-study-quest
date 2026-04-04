@@ -153,6 +153,24 @@ body {
     color: var(--text-muted);
 }
 
+.campaign-logistics {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-right: 4px;
+    margin-bottom: 20px;
+}
+
+.campaign-logistics::-webkit-scrollbar {
+    width: 4px;
+}
+.campaign-logistics::-webkit-scrollbar-track {
+    background: transparent;
+}
+.campaign-logistics::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
 .campaign-logistics h3 {
     font-size: 0.9rem;
     color: var(--text-secondary);
@@ -188,27 +206,47 @@ body {
     width: 0%;
 }
 
-.filter-rules {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.progression-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.progression-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.pi-header {
+    display: flex;
+    justify-content: space-between;
     font-size: 0.8rem;
     color: var(--text-secondary);
 }
 
-.filter-rules li {
-    padding: 8px 12px;
-    background: rgba(255,255,255,0.03);
-    border-radius: 6px;
-    margin-bottom: 8px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.pi-name {
+    color: var(--text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 160px;
 }
 
-.rule-ban i { color: var(--accent-red); }
-.rule-prio1 i { color: var(--accent-gold); }
-.rule-prio2 i { color: var(--accent-teal); }
+.pi-bar-wrapper {
+    width: 100%;
+    height: 4px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.pi-bar-fill {
+    height: 100%;
+    background: var(--accent-blue);
+    width: 0%;
+    transition: width 0.5s ease;
+}
 
 .settings-btn {
     margin-top: auto;
